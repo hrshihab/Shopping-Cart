@@ -1,16 +1,5 @@
 const plusBtn1 = document.getElementById("plusBtn1");
 plusBtn1.addEventListener("click", function () {
-  //  const currentValue=document.getElementById('currentValue').value;
-  //  const currentValueNumber=parseFloat(currentValue);
-  //  const updateValue=currentValueNumber+1;
-  //updateCount
-  //document.getElementById('currentValue').value=updateValue;
-  // const priceRate = document.getElementById("priceRate").innerText;
-  // const priceRateNumber = parseFloat(priceRate);
-  // const priceRateTotal = priceRateNumber + 1200;
-  //updateTotalPrice
-  // document.getElementById("priceRate").innerText = priceRateTotal;
-
   updateCount("currentValue1", 1);
   updateTotalPrice("priceRate1", 1200);
   updateSubTotal(1200);
@@ -21,16 +10,13 @@ minusBtn1.addEventListener("click", function () {
   updateCount("currentValue1", -1);
   updateTotalPrice("priceRate1", -1200);
   updateSubTotal(-1200);
-
 });
 
 const plusBtn2 = document.getElementById("plusBtn2");
 plusBtn2.addEventListener("click", function () {
   updateCount("currentValue2", 1);
-   updateTotalPrice("priceRate2", 60);
+  updateTotalPrice("priceRate2", 60);
   updateSubTotal(60);
-
-
 });
 
 const minusBtn2 = document.getElementById("minusBtn2");
@@ -38,7 +24,6 @@ minusBtn2.addEventListener("click", function () {
   updateCount("currentValue2", -1);
   updateTotalPrice("priceRate2", -60);
   updateSubTotal(-60);
-
 });
 
 function updateCount(id, num) {
@@ -55,13 +40,9 @@ function updateTotalPrice(id, num) {
   document.getElementById(id).innerText = priceRateTotal;
 }
 
-function updateSubTotal(num)
-{
-  const subTotal=document.getElementById('subTotal').innerText;
-  subTotalNumber=parseFloat(subTotal);
-  subTotalValue=subTotalNumber+num;
-  document.getElementById('subTotal').innerText=subTotalValue;
+function updateSubTotal(num) {
+  const subTotal = document.getElementById("subTotal").innerText;
+  subTotalNumber = parseFloat(subTotal);
+  subTotalValue = subTotalNumber + num;
+  document.getElementById("subTotal").innerText = subTotalValue;
 }
-
-
-
